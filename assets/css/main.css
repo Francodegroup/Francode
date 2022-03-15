@@ -1,0 +1,109 @@
+main {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+main h2 {
+  margin-top: 1rem;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.juntaPartes {
+  display: flex;
+  align-items: center;
+}
+.esquerda {
+  width: 65%;
+}
+.esquerda h3 {
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.esquerda p {
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  max-width: 75%;
+  padding: 1rem;
+  line-height: 2rem;
+  background-color: rgba(0, 0, 0, 0.432);
+  border-radius: 1rem;
+
+  text-align: center;
+}
+.esquerda .redes {
+  display: flex;
+  justify-content: space-around;
+  max-width: 80%;
+
+  margin-top: 5rem;
+}
+.esquerda .redes a {
+  font-size: 2rem;
+  border-radius: 99999px;
+  border: 1px solid #fff;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0;
+}
+.direita {
+  width: 45%;
+}
+.direita img {
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding-top: 0rem;
+  }
+  main h2 {
+    margin-top: 0rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .esquerda h3 {
+    font-size: 1.5rem;
+  }
+  .juntaPartes {
+    display: flex;
+    flex-direction: column;
+  }
+  .esquerda {
+    width: 100%;
+    order: 2;
+  }
+  .esquerda .redes {
+    max-width: 100%;
+  }
+  .esquerda p {
+    width: 100%;
+    max-width: unset;
+  }
+  .direita {
+    width: 100%;
+    order: 1;
+  }
+  .direita img {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
